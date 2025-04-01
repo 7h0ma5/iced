@@ -178,7 +178,7 @@ impl Layer {
     ) {
         self.primitives.push(Item::Group(
             primitives,
-            clip_bounds,
+            clip_bounds * transformation,
             transformation,
         ));
     }
@@ -191,7 +191,7 @@ impl Layer {
     ) {
         self.primitives.push(Item::Cached(
             primitives,
-            clip_bounds,
+            clip_bounds * transformation,
             transformation,
         ));
     }
